@@ -58,10 +58,12 @@ if __name__ == "__main__":
         batch_size=32,
         class_mode='binary')
 
-    pred_generator = test_datagen.flow_from_directory('data/img_val/',
-                                                      target_size=(150, 150),
-                                                      batch_size=100,
-                                                      class_mode='binary')
+    pred_generator = test_datagen.flow_from_directory(
+        'data/img_val/',
+        target_size=(150, 150),
+        batch_size=100,
+        class_mode='binary')
+    
     print('-' * 50)
     epochs = int(input('Количество эпох обучения: '))
 
